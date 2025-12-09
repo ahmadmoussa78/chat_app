@@ -8,6 +8,7 @@ environment:
   sdk: ^3.9.0
 
 dependencies:
+  bloc: ^9.1.0
   cloud_firestore: ^6.0.3
   cupertino_icons: ^1.0.8
   firebase_auth: ^6.1.0
@@ -15,6 +16,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
+  meta: ^1.16.0
   modal_progress_hud_nsn: ^0.5.1
 
 dev_dependencies:

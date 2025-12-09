@@ -9,4 +9,4 @@ class LoginLoading extends LoginState {}
 
 class LoginSuccess extends LoginState {}
 
-class Loginailure extends LoginState {}
+class LoginFailure extends LoginState {}

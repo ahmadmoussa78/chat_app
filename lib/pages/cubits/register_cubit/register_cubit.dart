@@ -4,8 +4,8 @@ import 'package:meta/meta.dart';
 
 part 'register_state.dart';
 
-class LoginCubit extends Cubit<RegisterState> {
-  LoginCubit() : super(RegisterInitial());
+class RegisterCubit extends Cubit<RegisterState> {
+  RegisterCubit() : super(RegisterInitial());
 
   Future<void> registerMethod({
     required String email,

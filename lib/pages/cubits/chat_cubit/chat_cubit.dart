@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:chat_app/models/message_model.dart';
 import 'package:chat_app/widgets/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
@@ -11,14 +12,18 @@ class ChatCubit extends Cubit<ChatState> {
   CollectionReference messages = FirebaseFirestore.instance.collection(
     kMessagesCollections,
   );
-
+  List<Message> messagesList = [];
   void sendMessage({required String message, required String email}) {
     messages.add({kMessage: message, kCreatedAt: DateTime.now(), "id": email});
   }
 
   void getMessage() {
     messages.orderBy(kCreatedAt, descending: true).snapshots().listen((event) {
-      emit(ChatSuccess());
+      List<Message> messagesList = [];
+      for (var doc in event.docs) {
+        messagesList.add(Message.fromjson(doc));
+      }
+      emit(ChatSuccess(messages: messagesList));
     });
   }
 }

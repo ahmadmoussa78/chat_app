@@ -32,10 +32,30 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             emit(LoginFailure(errMessage: "Something Went Wrong"));
           }
         }
+      } else if (event is RegisterEvent) {
+        Future<void> registerMethod({
+          required String email,
+          required String password,
+        }) async {
+          emit(RegisterLoading());
+          try {
+            UserCredential user = await FirebaseAuth.instance
+                .createUserWithEmailAndPassword(
+                  email: email,
+                  password: password,
+                );
+            emit(RegisterSuccess());
+          } on FirebaseAuthException catch (ex) {
+            if (ex.code == 'weak-password') {
+              emit(RegisterFauilre(errMessage: "weak-password"));
+            } else if (ex.code == 'email-already-in-use') {
+              emit(RegisterFauilre(errMessage: "email-already-in-use"));
+            }
+          } catch (e) {
+            emit(RegisterFauilre(errMessage: "Something Went Wrong"));
+          }
+        }
       }
-    }
-    
-    
-    );
+    });
   }
 }

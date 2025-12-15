@@ -63,9 +63,9 @@ class ChatPage extends StatelessWidget {
             child: TextField(
               controller: controller,
               onSubmitted: (data) {
-                BlocProvider.of<ChatCubit>(
-                  context,
-                ).sendMessage(message: data, email: email);
+                // BlocProvider.of<ChatCubit>(
+                //   context,
+                // ).sendMessage(message: data, email: email);
                 controller.clear();
 
                 _controller.animateTo(

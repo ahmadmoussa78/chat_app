@@ -11,10 +11,10 @@ class ChatPage extends StatelessWidget {
   List<Message> messagesList = [];
   TextEditingController controller = TextEditingController();
   final ScrollController _controller = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     var email = ModalRoute.of(context)!.settings.arguments;
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
@@ -40,13 +40,11 @@ class ChatPage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: BlocConsumer<ChatCubit, ChatState>(
-              listener: (context, state) {
-                if (state is ChatSuccess) {
-                  messagesList = state.messages;
-                }
-              },
+            child: BlocBuilder<ChatCubit, ChatState>(
               builder: (context, state) {
+                var messagesList = BlocProvider.of<ChatCubit>(
+                  context,
+                ).messagesList;
                 return ListView.builder(
                   reverse: true,
                   controller: _controller,
@@ -65,6 +63,9 @@ class ChatPage extends StatelessWidget {
             child: TextField(
               controller: controller,
               onSubmitted: (data) {
+                BlocProvider.of<ChatCubit>(
+                  context,
+                ).sendMessage(message: data, email: email);
                 controller.clear();
 
                 _controller.animateTo(

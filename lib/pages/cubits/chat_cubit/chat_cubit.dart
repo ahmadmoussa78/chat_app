@@ -19,6 +19,7 @@ class ChatCubit extends Cubit<ChatState> {
 
   void getMessage() {
     messages.orderBy(kCreatedAt, descending: true).snapshots().listen((event) {
+      messagesList.clear();
       for (var doc in event.docs) {
         messagesList.add(Message.fromjson(doc));
       }

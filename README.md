@@ -1,16 +1,54 @@
-# chat_app
+# 💬 Chat App
 
-A new Flutter project.
+[![Flutter](https://img.shields.io/badge/Flutter-Framework-blue)]
+[![Dart](https://img.shields.io/badge/Dart-Language-blue)]
+[![Cubit](https://img.shields.io/badge/Cubit-State%20Management-purple)]
+[![Firebase](https://img.shields.io/badge/Firebase-Backend-orange)]
 
-## Getting Started
+Chat App is a Flutter-based mobile application that allows users to register, login, and chat in real-time.  
+It demonstrates modern state management and Firebase integration.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📝 Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app provides:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- User authentication (register & login) using **Firebase Auth**  
+- Real-time messaging between users  
+- Chat history persistence using **FlutterFire**  
+- State management using **Cubit** for predictable behavior
+
+---
+
+## 🖼️ Screenshots
+
+| Login | Register | Chat |
+|-------|----------|------|
+| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) | ![Chat](screenshots/chat.png) |
+
+> 📌 Screenshots taken on **Android Pixel device**  
+> Recommended size: **411 × 891 px** (resized to ~280 px width for README)
+
+---
+
+## 🧠 State Management
+
+- **Cubit** for all state handling  
+- Proper handling of **loading, success, and error** states  
+- Ensures smooth user experience for authentication and chat
+
+---
+
+## 🌐 Firebase Integration
+
+- **Firebase Auth** for user login and registration  
+- **FlutterFire** for real-time messaging and data storage  
+- Centralized error handling for authentication and database operations  
+- Strongly typed Dart models for Firebase data
+
+---
+
+## 🛠️ Tech Stack
+
+Flutter · Dart · Cubit · Firebase Auth · FlutterFire

@@ -8,7 +8,7 @@
 Chat App is a Flutter-based mobile application that allows users to register, login, and chat in real-time.  
 It demonstrates modern state management and Firebase integration.
 
----
+
 
 ## 📝 Overview
 
@@ -19,18 +19,26 @@ The app provides:
 - Chat history persistence using **FlutterFire**  
 - State management using **Cubit** for predictable behavior
 
----
+
 
 ## 🖼️ Screenshots
 
-| Login | Register | Chat |
-|-------|----------|------|
-| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) | ![Chat](screenshots/chat.png) |
+[Login]
+
+(<img width="100" height="200" alt="Login" src="https://github.com/user-attachments/assets/37f10422-8af9-47b7-a151-bbdeaca3b0fb"/>)
+
+[Register]
+
+(<img width="100" height="200" alt="Register" src="https://github.com/user-attachments/assets/58c5ca1d-41f1-470e-910f-f1e8b60ad5a7" />) 
+
+[Chat]
+
+(<img width="100" height="200" alt="Chat" src="https://github.com/user-attachments/assets/10adce1d-6a10-4310-8103-deeb8c77e480" />)
 
 > 📌 Screenshots taken on **Android Pixel device**  
 > Recommended size: **411 × 891 px** (resized to ~280 px width for README)
 
----
+
 
 ## 🧠 State Management
 
@@ -38,7 +46,7 @@ The app provides:
 - Proper handling of **loading, success, and error** states  
 - Ensures smooth user experience for authentication and chat
 
----
+
 
 ## 🌐 Firebase Integration
 
@@ -47,7 +55,7 @@ The app provides:
 - Centralized error handling for authentication and database operations  
 - Strongly typed Dart models for Firebase data
 
----
+
 
 ## 🛠️ Tech Stack
 

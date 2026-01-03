@@ -35,8 +35,6 @@ The app provides:
 
 (<img width="100" height="200" alt="Chat" src="https://github.com/user-attachments/assets/10adce1d-6a10-4310-8103-deeb8c77e480" />)
 
-> 📌 Screenshots taken on **Android Pixel device**  
-> Recommended size: **411 × 891 px** (resized to ~280 px width for README)
 
 
 
